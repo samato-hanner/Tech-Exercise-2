@@ -26,7 +26,7 @@ def index():
             db.session.commit()
             return redirect(url_for('index'))
         except:
-            return "There was an issue adding your task"
+            return "Carter Wuz here"
     else:
         tasks = Todo.query.order_by(Todo.date_created).all()
         return render_template("index.html", tasks=tasks)
